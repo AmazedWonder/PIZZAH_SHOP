@@ -22,3 +22,19 @@ darkmode.onclick = () => {
         document.body.classList.remove('active');
     }
 }
+
+// Scroll Reveal
+const sr = ScrollReveal ({
+    origin: 'top',
+    distance: '40px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.home-content, .home-img, 
+            .about-img, .about-content, 
+            .box, .s-box, 
+            .btn, .connect-content, 
+            .contact-box`, {
+    interval: 200
+})
