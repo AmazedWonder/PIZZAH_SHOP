@@ -21,6 +21,24 @@
     --main-color: #ffb411;
     --text-color: #1e1c2a;
     --bg-color: #fff;
+
+    --big-font: 4rem;
+    --h2-font: 2.24rem;
+    --p-font: 0.9rem;
+}
+
+section {
+    padding: 50px 10%;
+}
+
+body.active {
+    --bg-color: #1e1c2a;
+    --text-color: #fff;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
 }
 
 #darkmode {
@@ -63,6 +81,21 @@ header {
     color: var(--main-color);
 }
 
+/* .bx-moon {
+    background: #cecdcc;
+} */
+
+.bx-moon:hover {
+    background: #747372;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.bx-sun:hover {
+    background: #fff;
+    color: #747372;
+}
+
 #menuIcon {
     font-size: 2rem;
     cursor: pointer;
@@ -85,6 +118,11 @@ header {
 .home-content h1 {
     font-size: var(--big-font);
     color: var(--main-color);
+}
+
+.home-content h2 {
+    font-size: var(--h2-font);
+    margin: 1rem 0 1rem;
 }
 
 .btn {
@@ -153,7 +191,8 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 0.5rem;
-     box-shadow: 0 2px 4px rgb(4 64 54 / 10%);
+    box-shadow: 0 2px 4px rgb(4 64 54 / 10%);
+    padding: 10px;
 }
 
 .box-img {
@@ -181,6 +220,7 @@ header {
 
 .box span {
     font-size: var(--p-font);
+    font-weight: 500;
 }
 
 .box .bx {
@@ -194,7 +234,7 @@ header {
 }
 
 .box .bx:hover {
-    background: #fff;
+    background: #d1a30d;
 }
 
 .services-container {
@@ -219,8 +259,6 @@ header {
 .connect {
     display: flex;
     align-items: center;
-    /* justify-content: center;
-    gap: 2rem; */
     justify-content: space-around;
     margin: 20px 40px;
 }
@@ -287,6 +325,16 @@ header {
     text-align: center;
   }
 
+  @media (max-width: 921px) {
+    header {
+        padding: 14px 41px;
+    }
+    :root {
+        --big-font: 3rem;
+        --h2-font: 1.7rem;
+    }
+  }
+
   @media (max-width: 768px) {
     section {
         padding: 50px 8%;
@@ -297,7 +345,7 @@ header {
     }
     header .navbar {
         position: absolute;
-        top: -4px;
+        top: -400px;
         left: 0;
         right: 0;
         display: flex;
@@ -307,7 +355,11 @@ header {
         box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
         transition: 0.2s ease;
     }
+    /* .navbar {
+        display: none;
+    } */
     .navbar .active {
+        /* display: flex; */
         top: 100%;
     }
     .navbar a {
@@ -322,13 +374,25 @@ header {
     }
   }
 
+  /* Ensure images are responsive and well-scaled on smaller screens */
+/* .about-img img, .home-img img {
+    max-width: 100%;
+    height: auto;
+} */
+
+/* Apply background color on dark mode toggle */
+/* body.active {
+    background-color: #121212;
+    color: #fff;
+} */
+
   @media (max-width: 715px) {
     header {
         padding: 10px 16px;
     }
     .home {
         grid-template-columns: 1fr;
-        text-align: center;
+        /* text-align: center; */
     }
     .about {
         grid-template-columns: 1fr;
